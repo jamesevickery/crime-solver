@@ -39,7 +39,7 @@ View [`Program.cs`](https://github.com/jamesevickery/crime-solver/blob/master/Cr
 
 #### Another way of solving the puzzle:
 
-Let 'A' mean 'Alex commited the crime', 'B' means that it was Brad, etc.
+Let '`A`' mean 'Alex commited the crime', '`B`' means that it was Brad, etc.
 
 From the suspects' statements we can form a proposition:
 
