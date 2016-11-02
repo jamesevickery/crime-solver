@@ -45,6 +45,7 @@ namespace CrimeSolver
         static string whoWasIt(bool a, bool b, bool c, bool d)
         {
             IList<string> names = new List<string>();
+            // Requires .NET 4+
             if (a) names.Add("Alex");
             if (b) names.Add("Brad");
             if (c) names.Add("Charlie");
