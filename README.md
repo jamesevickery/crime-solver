@@ -41,7 +41,7 @@ View [`Program.cs`](https://github.com/jamesevickery/crime-solver/blob/master/Cr
 
 Let '`A`' mean 'Alex commited the crime', '`B`' means that it was Brad, etc.
 
-From the suspects' statements we can form a proposition:
+From the four suspects' statements we can form a proposition:
 
     ((¬D ∧ B) ∨ (D ∧ ¬B)) ∧
     ((¬C ∧ ¬D) ∨ (C ∧ D)) ∧
@@ -59,7 +59,7 @@ Simplified to:
 
     ¬C ∧ ¬D ∧ ¬A ∧ ((¬D ∧ B) ∨ (D ∧ ¬B))
 
-Finally:
+Finally, as we know `¬D` is true:
 
     ¬C ∧ ¬D ∧ ¬A ∧ B
 
@@ -70,4 +70,4 @@ This result is (almost) the same as the program's result. Program output:
     The crime was commited by: Alex, Charlie, David.
     The crime was commited by: Brad.
 
-The program's only answer assuming that only one person commited the crime is `The crime was commited by: Brad.`, although due to the original questions ambiguity (not specifying that only one person commited the crime) it is possible that all suspects *except* Brad commited the crime.
+The program's only answer assuming that only one person commited the crime is `The crime was commited by: Brad.`, although due to the original question's ambiguity (not specifying that only one person commited the crime) it is possible that all suspects *except* Brad commited the crime.
