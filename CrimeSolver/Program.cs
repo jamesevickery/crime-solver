@@ -28,7 +28,11 @@ namespace CrimeSolver
                                 Valid(a, !d) &
                                 Valid(c, !a))
                             {
-                                Console.WriteLine(whoWasIt(a, b, c, d));
+                                bool a_static = a;
+                                bool b_static = b;
+                                bool c_static = c;
+                                bool d_static = d;
+                                Console.WriteLine(whoWasIt(ref a_static, ref b_static, ref c_static, ref d_static));
                             }
                         }
                     }
@@ -42,14 +46,14 @@ namespace CrimeSolver
             return ((!x && y) || (x && !y));
         }
 
-        static string whoWasIt(bool a, bool b, bool c, bool d)
+        static string whoWasIt<T>(ref T a, ref T b, ref T c, ref T d)
         {
             IList<string> names = new List<string>();
             // Requires .NET 4+
-            if (a) names.Add("Alex");
-            if (b) names.Add("Brad");
-            if (c) names.Add("Charlie");
-            if (d) names.Add("David");
+            if (bool.Parse(a.ToString())) names.Add("Alex");
+            if (bool.Parse(b.ToString())) names.Add("Brad");
+            if (bool.Parse(c.ToString())) names.Add("Charlie");
+            if (bool.Parse(d.ToString())) names.Add("David");
             string convicts = string.Join(", ", names);
 
             string result = "The crime was commited by: ";
